@@ -23,7 +23,7 @@ def menu
     menu
   end
   players
-  binding.pry
+  #binding.pry
 end
 
 menu
