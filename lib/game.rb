@@ -44,12 +44,11 @@ class Game
   end
 
   def play
-
     if !over?
-
       turn
       play
     else
+      @board.display
       puts "Congratulations #{winner}!" if won?
       puts "Cat's Game!" if draw?
     end
