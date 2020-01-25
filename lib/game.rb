@@ -31,7 +31,7 @@ class Game
 
   def winner
     return nil if !self.won?
-    @board.cells[self.won?[0]] == 'X' ? @player_1.token : @player_2.token
+    @board.cells[self.won?[0]] == 'X' ? 'X' : 'O'
   end
 
   def turn
