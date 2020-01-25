@@ -38,7 +38,7 @@ class Board
   end
 
   def valid_move?(pos)
-    !taken?(pos) && pos.to_i <= 9 && pos.to_i != 0
+    !taken?(pos) && pos.to_i.between?(1, 9)
   end
 
   def update(pos, player)
