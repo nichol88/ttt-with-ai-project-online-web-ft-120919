@@ -1,3 +1,27 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
+
+
+puts "Hey there!"
+puts "What kind of game do you want to play?"
+puts "1. 1-Player"
+puts "2. 2-Player"
+puts "3. 0-Player"
+
+players = []
+type = gets.strip
+
+if type == '1'
+  players = [Players::Human.new(), Players::Computer.new()]
+elsif type == '2'
+  players = [Players::Human.new(), Players::Human.new()]
+elsif type == '3'
+  players = [Players::Computer.new(), Players::Computer.new()]
+end
+
+
+puts "Who should go first? Type 'X' or 'O'"
+token = gets.strip
+
+Game.new
