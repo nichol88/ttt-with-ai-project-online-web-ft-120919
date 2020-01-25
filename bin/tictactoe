@@ -34,7 +34,9 @@ def menu
     players[0] = players[0].class.new('O')
   end
 
-  Game.new(players[0], players[1])
+  game = Game.new(players[0], players[1])
+
+  game.play
 
 end
 
