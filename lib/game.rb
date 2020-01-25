@@ -35,6 +35,7 @@ class Game
   end
 
   def turn
+    puts 'Make selection:'
     selection = current_player.move(@board)
     turn if !@board.valid_move?(selection)
     @board.update(selection, current_player)
@@ -43,6 +44,7 @@ class Game
   def play
     @board.display
     if !over?
+
       turn
       play
     else
