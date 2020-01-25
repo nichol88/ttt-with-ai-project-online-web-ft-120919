@@ -35,6 +35,7 @@ class Game
   end
 
   def turn
+    @board.display
     puts 'Make selection:'
     selection = current_player.move(@board)
     puts "#{selection}"
@@ -43,7 +44,7 @@ class Game
   end
 
   def play
-    @board.display
+
     if !over?
 
       turn
