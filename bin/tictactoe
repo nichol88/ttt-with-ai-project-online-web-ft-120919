@@ -13,11 +13,11 @@ players = []
 input = gets.strip
 
 def menu
-  if type == '1'
+  if input == '1'
     players = [Players::Human.new(), Players::Computer.new()]
-  elsif type == '2'
+  elsif input == '2'
     players = [Players::Human.new(), Players::Human.new()]
-  elsif type == '3'
+  elsif input == '3'
     players = [Players::Computer.new(), Players::Computer.new()]
   else
     puts 'try again.'
