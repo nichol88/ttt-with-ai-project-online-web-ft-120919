@@ -41,8 +41,8 @@ class Game
   end
 
   def play
+    @board.display
     if !over?
-      @board.display
       turn
       play
     else
