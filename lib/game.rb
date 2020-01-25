@@ -23,6 +23,7 @@ class Game
 
   def draw?
     @board.full? && !self.won?
+    puts "Cat's Game!"
   end
 
   def over?
@@ -30,7 +31,7 @@ class Game
   end
 
   def winner
-    return nil if !self.won?
+    return nil if !won?
     @board.cells[self.won?[0]] == 'X' ? 'X' : 'O'
   end
 
@@ -47,7 +48,7 @@ class Game
       play
     else
       puts "Congratulations #{winner}!" if won?
-      puts "Cat's Game!" if draw?
+       if draw?
     end
   end
 end
