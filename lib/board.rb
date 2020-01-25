@@ -11,11 +11,13 @@ class Board
   end
 
   def display
+    puts ''
     puts " #{@cells[0]} | #{@cells[1]} | #{@cells[2]} "
     puts "-----------"
     puts " #{@cells[3]} | #{@cells[4]} | #{@cells[5]} "
     puts "-----------"
     puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
+    puts ''
   end
 
   def position(num)
@@ -36,7 +38,7 @@ class Board
   end
 
   def valid_move?(pos)
-    !taken?(pos) && pos.to_i <= 9 && pos.to_i != 0
+    !taken?(pos) && pos.to_i.between?(1, 9)
   end
 
   def update(pos, player)

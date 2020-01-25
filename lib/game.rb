@@ -30,12 +30,15 @@ class Game
   end
 
   def winner
-    return nil if !self.won?
-    @board.cells[self.won?[0]] == 'X' ? @player_1.token : @player_2.token
+    return nil if !won?
+    @board.cells[self.won?[0]] == 'X' ? 'X' : 'O'
   end
 
   def turn
+    @board.display
+    puts 'Make selection:'
     selection = current_player.move(@board)
+    puts "#{selection}"
     turn if !@board.valid_move?(selection)
     @board.update(selection, current_player)
   end
@@ -45,6 +48,7 @@ class Game
       turn
       play
     else
+      @board.display
       puts "Congratulations #{winner}!" if won?
       puts "Cat's Game!" if draw?
     end
