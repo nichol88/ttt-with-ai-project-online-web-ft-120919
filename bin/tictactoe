@@ -29,5 +29,6 @@ menu
 
 puts "Who should go first? Type 'X' or 'O'"
 token = gets.strip
+players[0] = players[0].class.new(token)
 
 Game.new(players[0], players[1])
