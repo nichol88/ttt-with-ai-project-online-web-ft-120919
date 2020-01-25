@@ -18,6 +18,7 @@ elsif type == '2'
   players = [Players::Human.new(), Players::Human.new()]
 elsif type == '3'
   players = [Players::Computer.new(), Players::Computer.new()]
+else
 end
 
 
