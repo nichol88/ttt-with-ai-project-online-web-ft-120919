@@ -24,17 +24,18 @@ def menu
   end
   players
   #binding.pry
+
+  puts "Who should go first? Type 'X' or 'O'"
+  token = gets.strip
+
+  if token == 'X'
+    players[1] = players[1].class.new('O')
+  else
+    players[0] = players[0].class.new('O')
+  end
+
+  Game.new(players[0], players[1])
+
 end
 
 menu
-
-puts "Who should go first? Type 'X' or 'O'"
-token = gets.strip
-
-if token == 'X'
-  players[1] = players[1].class.new('O')
-else
-  players[0] = players[0].class.new('O')
-end
-
-Game.new(players[0], players[1])
