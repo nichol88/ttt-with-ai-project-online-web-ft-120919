@@ -37,7 +37,7 @@ class Game
   def turn
     puts 'Make selection:'
     selection = current_player.move(@board)
-    puts 'selection'
+    puts "#{selection}"
     turn if !@board.valid_move?(selection)
     @board.update(selection, current_player)
   end
