@@ -9,9 +9,8 @@ puts "1. 1-Player"
 puts "2. 2-Player"
 puts "3. 0-Player"
 
-players = []
-
 def menu
+  players = []
   i = gets.strip
   if i == '1'
     players = [Players::Human.new(), Players::Computer.new()]
@@ -23,6 +22,7 @@ def menu
     puts 'try again.'
     menu
   end
+  players
   binding.pry
 end
 
