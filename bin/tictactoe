@@ -23,7 +23,7 @@ def menu
     puts 'try again.'
     menu
   end
-  binding.pry
+  #binding.pry
 end
 
 menu
