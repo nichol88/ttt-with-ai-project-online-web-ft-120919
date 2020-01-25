@@ -42,6 +42,7 @@ class Game
 
   def play
     if !over?
+      @board.display
       turn
       play
     else
