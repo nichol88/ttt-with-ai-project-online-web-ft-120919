@@ -10,6 +10,7 @@ puts "2. 2-Player"
 puts "3. 0-Player"
 
 players = []
+
 def menu
   i = gets.strip
   if i == '1'
