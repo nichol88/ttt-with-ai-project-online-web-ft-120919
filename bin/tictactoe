@@ -19,6 +19,7 @@ elsif type == '2'
 elsif type == '3'
   players = [Players::Computer.new(), Players::Computer.new()]
 else
+  puts 'try again.'
 end
 
 
