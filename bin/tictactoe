@@ -21,6 +21,7 @@ def menu
     players = [Players::Computer.new(), Players::Computer.new()]
   else
     puts 'try again.'
+    menu
   end
 end
 
