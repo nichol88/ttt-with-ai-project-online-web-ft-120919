@@ -11,7 +11,7 @@ puts "3. 0-Player"
 
 players = []
 input = gets.strip
-
+binding.pry
 def menu
   if input == '1'
     players = [Players::Human.new(), Players::Computer.new()]
