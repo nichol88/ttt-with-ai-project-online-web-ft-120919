@@ -25,7 +25,7 @@ def menu
   end
 end
 
-
+menu
 puts "Who should go first? Type 'X' or 'O'"
 token = gets.strip
 
