@@ -10,7 +10,7 @@ puts "2. 2-Player"
 puts "3. 0-Player"
 
 players = []
-type = gets.strip
+input = gets.strip
 
 def menu
   if type == '1'
