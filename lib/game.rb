@@ -23,7 +23,6 @@ class Game
 
   def draw?
     @board.full? && !self.won?
-    puts "Cat's Game!"
   end
 
   def over?
@@ -48,7 +47,7 @@ class Game
       play
     else
       puts "Congratulations #{winner}!" if won?
-       if draw?
+      puts "Cat's Game!" if draw?
     end
   end
 end
