@@ -33,10 +33,14 @@ class Board
   end
 
   def taken?(pos)
-    !@cells[pos.to_i] == " "
+    #puts "Is position #{pos} taken?"
+    @cells[pos.to_i-1] == "X" || @cells[pos.to_i-1] == "O"
+
   end
 
   def valid_move?(pos)
+    puts "checking if move is valid (#{pos})"
+    sleep 1
     !taken?(pos) && pos.to_i.between?(1, 9)
   end
 

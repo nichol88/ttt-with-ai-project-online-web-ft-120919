@@ -40,9 +40,13 @@ class Game
     selection = current_player.move(@board)
     puts "#{selection}"
     if @board.valid_move?(selection)
+      puts 'valid move.'
       @board.update(selection, current_player)
       puts "#{current_player} moved to #{selection}"
+      sleep 1
     else
+      puts 'Invalid move. Try again'
+      sleep 1
       turn
     end
   end
