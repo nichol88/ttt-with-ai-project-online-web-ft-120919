@@ -1,4 +1,3 @@
-require 'pry'
 class Board
   attr_accessor :cells
 
@@ -11,6 +10,7 @@ class Board
   end
 
   def display
+    system('clear')
     puts ''
     puts " #{@cells[0]} | #{@cells[1]} | #{@cells[2]} "
     puts "-----------"
@@ -25,7 +25,7 @@ class Board
   end
 
   def full?
-    !@cells.include?(" ")
+    @cells.all? { |cell| cell == 'X' || cell == 'O'}
   end
 
   def turn_count
@@ -33,8 +33,7 @@ class Board
   end
 
   def taken?(pos)
-    pos = pos.to_i - 1
-    @cells[pos] != " "
+    !@cells[pos.to_i] == " "
   end
 
   def valid_move?(pos)

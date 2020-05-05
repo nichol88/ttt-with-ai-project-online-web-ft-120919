@@ -26,7 +26,7 @@ class Game
   end
 
   def over?
-    self.won? || self.draw?
+    won? || draw?
   end
 
   def winner
@@ -39,8 +39,12 @@ class Game
     puts 'Make selection:'
     selection = current_player.move(@board)
     puts "#{selection}"
-    turn if !@board.valid_move?(selection)
-    @board.update(selection, current_player)
+    if @board.valid_move?(selection)
+      @board.update(selection, current_player)
+      puts "#{current_player} moved to #{selection}"
+    else
+      turn
+    end
   end
 
   def play
